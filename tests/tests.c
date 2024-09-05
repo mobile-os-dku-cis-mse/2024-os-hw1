@@ -86,8 +86,6 @@ void ck_assert_str_contains(const char *str, const char *substr) {
     if (str == NULL || substr == NULL) {
         ck_abort_msg("String or substring is NULL.");
     }
-    printf("str: %s\n", str);
-    printf("substr: %s\n", substr);
     if (strstr(str, substr) == NULL) {
         ck_abort_msg("String does not contain the expected substring: '%s'", substr);
     }
@@ -103,11 +101,13 @@ START_TEST(test_getenv_invalid) {
     char *output = capture_stdout(test_func);
     ck_assert_msg(output != NULL, "Failed to capture stdout");
     trim_newline(output);
+    printf("Captured output: '%s'\n", output);
     ck_assert_str_eq(output, "Environment variable not found.");
 
     free(output);
 }
 END_TEST
+
 
 START_TEST(test_echo_command) {
     void test_func(void) {
@@ -149,12 +149,13 @@ START_TEST(test_getenv_path) {
     char *output = capture_stdout(test_func);
     ck_assert_msg(output != NULL, "Failed to capture stdout");
     trim_newline(output);
-
+    printf("Captured output: '%s'\n", output);
     ck_assert_str_contains(output, "/usr/bin");
 
     free(output);
 }
 END_TEST
+
 
 Suite *shell_suite(void) {
     Suite *s;
