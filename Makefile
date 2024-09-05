@@ -5,7 +5,7 @@ TARGET = SiSH
 TEST_TARGET = SiSH_test
 
 CFLAGS = -Wextra -Wall -Iinclude
-LDFLAGS = -lcheck -lsubunit
+LDFLAGS = -lcheck -lsubunit -lm -lrt
 
 SRC = main.c \
       src/commands/getenv.c \
