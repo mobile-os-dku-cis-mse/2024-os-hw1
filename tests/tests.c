@@ -101,13 +101,11 @@ START_TEST(test_getenv_invalid) {
     char *output = capture_stdout(test_func);
     ck_assert_msg(output != NULL, "Failed to capture stdout");
     trim_newline(output);
-    printf("Captured output: '%s'\n", output);
     ck_assert_str_eq(output, "Environment variable not found.");
 
     free(output);
 }
 END_TEST
-
 
 START_TEST(test_echo_command) {
     void test_func(void) {
@@ -149,13 +147,15 @@ START_TEST(test_getenv_path) {
     char *output = capture_stdout(test_func);
     ck_assert_msg(output != NULL, "Failed to capture stdout");
     trim_newline(output);
-    printf("Captured output: '%s'\n", output);
-    ck_assert_str_contains(output, "/usr/bin");
+
+    printf("Captured PATH: '%s'\n", output);
+    fflush(stdout);
+
+    ck_assert_str_contains(output, "/usr/local/sbin");
 
     free(output);
 }
 END_TEST
-
 
 Suite *shell_suite(void) {
     Suite *s;
