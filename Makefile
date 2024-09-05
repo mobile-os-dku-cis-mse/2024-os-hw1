@@ -36,7 +36,7 @@ $(TEST_TARGET): $(TEST_OBJ)
 	@$(CC) -o $@ $(TEST_OBJ) $(LDFLAGS)
 	@echo -e "\e[1;36mFinished compiling $@\e[0m"
 
-.PHONY: all fclean clean re test
+.PHONY: all fclean clean re test run_test
 
 debug: CFLAGS += -g3
 debug: clean all
@@ -53,4 +53,6 @@ re: fclean all
 
 # Build and run tests
 test: $(TEST_TARGET)
+
+run_test: test
 	@./$(TEST_TARGET)
