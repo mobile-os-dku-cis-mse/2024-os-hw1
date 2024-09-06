@@ -140,8 +140,10 @@ END_TEST
 
 START_TEST(test_getenv_path) {
     void test_func(void) {
-        char input[] = "getenv PATH";
-        process_command(input);
+        char setenv[] = "setenv PATH /usr/local/sbin";
+        char getenv[] = "getenv PATH";
+        process_command(setenv);
+        process_command(getenv);
     }
 
     char *output = capture_stdout(test_func);

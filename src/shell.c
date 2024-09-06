@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include "commands/getenv.h"
+#include "commands/setenv.h"
 #include "commands/quit.h"
 
 typedef void (*command_func_ptr)(char **args);
@@ -33,6 +34,7 @@ typedef struct {
 
 Command command_table[] = {
     {"getenv", getenv_command},
+    { "setenv", setenv_command},
     {"quit", quit_command},
     {NULL, execute_command}
 };

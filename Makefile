@@ -5,12 +5,13 @@ TARGET = SiSH
 TEST_TARGET = SiSH_test
 
 CFLAGS = -Wextra -Wall -Iinclude
-LDFLAGS = -lcheck -lsubunit -lm
+LDFLAGS = -lcheck
 
 SRC = main.c \
+      src/shell.c \
       src/commands/getenv.c \
       src/commands/quit.c \
-      src/shell.c \
+      src/commands/setenv.c \
 
 OBJ = $(SRC:.c=.o)
 
@@ -18,6 +19,7 @@ TEST_SRC = tests/tests.c \
            src/shell.c \
            src/commands/getenv.c \
            src/commands/quit.c \
+           src/commands/setenv.c \
 
 TEST_OBJ = $(TEST_SRC:.c=.o)
 
@@ -49,7 +51,8 @@ fclean: clean
 	@$(rm) $(TARGET) $(TEST_TARGET)
 	@echo "Removed binary files"
 
-re: fclean all
+re: fclean
+	@$(MAKE) all
 
 # Build and run tests
 test: $(TEST_TARGET)
