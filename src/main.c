@@ -25,51 +25,51 @@ void child_handler(int signo){
 	if (count >= 3) flag = 1;
 }
 
-int main() { 
-	int i = 0; 
-	
-	struct sigaction old_sa; 
-	struct sigaction new_sa; 
+int main() {
+    int i = 0;
 
-	memset(&old_sa, 0, sizeof(old_sa));
-	memset(&new_sa, 0, sizeof(new_sa)); 
-	new_sa.sa_handler = alrm_handler; 
-	sigaction(SIGALRM, &new_sa, &old_sa); 
+    struct sigaction old_sa;
+    struct sigaction new_sa;
 
-	struct itimerval new_timer; 
-	struct itimerval old_timer; 
-	memset(&new_timer, 0, sizeof(new_timer)); 
-	memset(&old_timer, 0, sizeof(old_timer)); 
-	new_timer.it_interval.tv_sec = 1; 
-	new_timer.it_value.tv_sec = 1; 
-	setitimer(ITIMER_REAL, &new_timer, &old_timer); 
+    memset(&old_sa, 0, sizeof(old_sa));
+    memset(&new_sa, 0, sizeof(new_sa));
+    new_sa.sa_handler = alrm_handler;
+    sigaction(SIGALRM, &new_sa, &old_sa);
 
-	for(i = 0; i < 10; i++){ 
-		int ipid; 
-		int child_status; 
-		ipid = fork(); 
-		if (ipid < 0) { 
-			perror("fork error"); 
-		} else if (ipid == 0){ 
-			// In this case, fork just 
-			memset(&old_sa, 0, sizeof(old_sa)); 
-			memset(&new_sa, 0, sizeof(new_sa)); 
-			new_sa.sa_handler = child_handler; 
-			sigaction(SIGUSR1, &new_sa, &old_sa); 
+    struct itimerval new_timer;
+    struct itimerval old_timer;
+    memset(&new_timer, 0, sizeof(new_timer));
+    memset(&old_timer, 0, sizeof(old_timer));
+    new_timer.it_interval.tv_sec = 1;
+    new_timer.it_value.tv_sec = 1;
+    setitimer(ITIMER_REAL, &new_timer, &old_timer);
 
-			count = 0; 
-			flag = 0; 
-			while (!flag){ 
-				sleep(1); 
-			}
-			printf("pid: %d, done. make sure you're not creating additional process\n", getpid()); 
-		return 0; 
-	} else { 
-		pids[i] = ipid; 
-	}
+    for (i = 0; i < 10; i++) {
+        int ipid;
+        int child_status;
+        ipid = fork();
+        if (ipid < 0) {
+            perror("fork error");
+        } else if (ipid == 0) {
+            // In this case, fork just
+            memset(&old_sa, 0, sizeof(old_sa));
+            memset(&new_sa, 0, sizeof(new_sa));
+            new_sa.sa_handler = child_handler;
+            sigaction(SIGUSR1, &new_sa, &old_sa);
 
-	while (!flag){ 
-		sleep(1); 
-	}
-	return 0; 
+            count = 0;
+            flag = 0;
+            while (!flag) {
+                sleep(1);
+            }
+            printf("pid: %d, done. make sure you're not creating additional process\n", getpid());
+            return 0;
+        } else {
+            pids[i] = ipid;
+        }
+    }
+    while (!flag) {
+        sleep(1);
+    }
+    return 0;
 }
