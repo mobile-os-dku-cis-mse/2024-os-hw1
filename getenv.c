@@ -9,6 +9,7 @@ int main(int argc, char * argv[])
 	char *tok[100], *saveptr;
 	if (argc == 1)	{
 		printf("usage: getenv env_vars ... \n");
+		printf("example: \"./a.out PATH HOME\"\n");
 		return 0;
 	} else {
 		for (i = 0 ; i < argc-1 ; i++) {
