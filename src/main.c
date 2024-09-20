@@ -1,11 +1,8 @@
 #include <stdio.h>
-#include <sys/types.h>
-#include <sys/time.h>
-#include <sys/wait.h>
-#include <unistd.h>
 #include <stdlib.h>
-#include <signal.h>
+#include <unistd.h>
 #include <string.h>
+#include <sys/wait.h>
 
 int pids[10];
 int count;
@@ -48,7 +45,7 @@ int main() {
         } else if(pid == 0){
             if(execvp(args[0], args) == -1){
                 // execvp의 반환 값에 따라서, 명령 실패 이유를 찾도록 한다.
-                fprintf(stderr, "fail to run the command\n")
+                fprintf(stderr, "fail to run the command\n");
                 return 0;
             }
         } else {
