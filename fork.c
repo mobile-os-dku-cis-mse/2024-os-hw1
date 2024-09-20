@@ -14,18 +14,18 @@ int main(int argc, char *argv[])
 	for (i = 0 ; i < 10 ; i++) {
 		// 새로운 자식 프로세스를 생성
 		pid = fork();
+		printf("\n!!! : %d\n", pid);
 		if (pid == -1) {
 			// 호출이 실패
 			perror("fork error");
 			return 0;
-		}
-		else if (pid == 0) {
+		} else if (pid == 0) {
 			// child
 			printf("child process with pid %d (i: %d) \n", getpid(), i);
 			exit(0);
 		} else {
 			// parent
-			printf("parent process with pid %d (i: %d) \n", getpid(), i);
+			printf("parent process with pid %d (i: %d)... wait for child \n", getpid(), i);
 			wait(0);
 		}
 	}

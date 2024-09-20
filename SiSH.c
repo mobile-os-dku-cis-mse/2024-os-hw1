@@ -67,9 +67,7 @@ void execute_command(char *input) {
         if (pid < 0) {
             perror("Fork failed");
             return;
-        }
-
-        if (pid == 0) { // Child process for executing
+        } else if (pid == 0) { // Child process for executing
             execvp(args[0], args); // Execute the specified executable
             perror("Execution failed"); // If execvp fails
             exit(1);
@@ -84,9 +82,7 @@ void execute_command(char *input) {
     if (pid < 0) {
         perror("Fork failed");
         return;
-    }
-
-    if (pid == 0) { // Child process
+    } else if (pid == 0) { // Child process
         // Get the PATH environment variable
         char *path = getenv("PATH");
         char *path_token = strtok(path, ":");
@@ -123,3 +119,7 @@ int main() {
 
     return 0;
 }
+
+/*
+execve는 환경 변수를 명시적으로 제공할 수 있지만, execvp는 환경 변수를 기본적으로 현재 프로세스의 환경을 사용
+*/
