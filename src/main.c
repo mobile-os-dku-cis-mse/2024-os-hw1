@@ -22,8 +22,9 @@ int main() {
 
         fgets(input, MAX_LINE, stdin);
 
-        if((strlen(input) > 0) && (input[strlen(input - 1)] == '\n'))
+        if((strlen(input) > 0) && (input[strlen(input) - 1] == '\n'))
             input[strlen(input) - 1] = '\0';
+
 
         if(strcmp(input, "exit") == 0){
             should_run = 0;
@@ -40,7 +41,7 @@ int main() {
         pid_t pid = fork();
 
         if(pid < 0){
-            fprintf(strerr, "fail to execute\n");
+            fprintf(stderr, "fail to execute\n");
             return 1;
         } else if(pid == 0){
             if(execvp(args[0], args) == -1){
