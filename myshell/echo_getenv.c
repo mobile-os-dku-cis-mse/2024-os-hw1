@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "other_func.h"
 
-int main(int argc, char * argv[])
-{
+void echo_getenv(int argc, char *argv[]) {
 	int i, j=0;
 	char *env, *str;
 	char *tok[100], *saveptr;
-	printf("%d\n", argc);
 	if (argc == 1)	{
 		printf("usage: getenv env_vars ... \n");
-		return 0;
 	} else {
 		for (i = 0 ; i < argc-1 ; i++) {
 			env = getenv(argv[i+1]);
@@ -23,6 +21,4 @@ int main(int argc, char * argv[])
 			printf("***---------------------***\n");
 		}
 	}
-
-	return 0;
 }

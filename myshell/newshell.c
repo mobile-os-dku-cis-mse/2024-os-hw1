@@ -7,8 +7,9 @@
 #include <signal.h>
 #include <string.h>
 #include <errno.h>
+#include "other_func.h"
 
-char *env; // 환경변수
+void (*old_fun)( int);
 
 void read_command(char *command){
     printf("symoon$ ");
@@ -22,36 +23,35 @@ void read_command(char *command){
     */
 }
 
-void help_command() { // 명령어를 help해주는 함수
+// signal function : ctrl-c 강제종료 없애기
+void ctrlc_handler( int signo) {
+    char c; // 사용자 입력받을 문자 선언
 
-    printf("Different commands:\n");
+    printf("\nDo you really want to quit? [y/n]"); // 사용자 입력 묻는 프린트문    
+    
+
+    c = getchar(); // 문자 입력받기
+    if (c == 'y' || c == 'Y') { // c가 y혹은 Y이면 종료하기
+        exit(0);
+    } else {
+        // 버퍼 비우기 (by. ChatGPT)
+        // while ((c = getchar()) != '\n' && c != EOF) { }
+        printf("Enter\n");
+        // 아니면 계속 진행되기
+        }
+}
+
+void help_command() { // 명령어를 help해주는 함수
+    printf("***---------------------***\n");
+    printf("Command different from the original:\n");
     printf("exit\t: Exit the shell.\n");
-    printf("help\t: show this help\n");
+    printf("help\t: Show this help\n");
     printf("&\t: background processing\n");
     printf("cd\t: Change the current directory.\n");
+    printf("env\t: Get environment value.\n");
+    printf("***---------------------***\n");
 	
 }
-
-//cd --> chdir
-void cd_command(char *argv){
-    // 현재 dir 주소 저장
-    char cwd[1024]; 
-    getcwd(cwd, sizeof(cwd));
-    printf("%s -> ", cwd);
-
-    // cd를 사용하여 주소 변환
-    // chdir(argv);
-    int ch = chdir(argv);
-    if(ch == -1){
-        fprintf(stderr, "working directory change error: %s\n", strerror(errno));
-    } else {
-        getcwd(cwd, sizeof(cwd));
-        printf("%s\n", cwd);
-    }
-    // chdir(argv);
-    // fchdir(getcwd(cwd, sizeof(cwd)));
-}
-//signal --> ctrl + C 누르면 꺼지는 이슈 방지
 
 
 void print_command(char *command){
@@ -66,26 +66,16 @@ void print_command(char *command){
             token = strtok(NULL, " ");
         }
         argv[i] = NULL;
-        
-        if(strcmp(argv[0], "cd") == 0){
-            cd_command(argv[1]);
-        }
-        else {
-            execvp(argv[0], argv); // 명령어 실행
+
+        if(strcmp(argv[0], "env") == 0){
+            echo_getenv(i, argv);
+        } else {
+            execvp(argv[0], argv); // 명령어 실행 
             perror("execve failed");
+            printf("If you are curious about other commands, check out \'help\'.\n");
         }
         exit(1);
-
-        // 실행 파일의 전체 경로를 찾기
-        /*char path[1024];
-        snprintf(path, sizeof(path), "/usr/bin/%s", argv[0]); // 경로
-
-        // execve 사용: 실행 파일 경로, 인자 배열, 환경 변수 배열
-        char *envp[] = { NULL }; // 환경 변수가 필요 없으면 NULL로 설정
-        if (execve(path, argv, envp) == -1) {
-            fprintf(stderr, "프로그램 실행 error: %s\n", strerror(errno));
-            exit(1);
-        }*/
+        
 
     } else if(pid > 0) {
         wait(NULL);
@@ -99,16 +89,23 @@ void print_command(char *command){
 
 int main(){
     char command[4095];
-
+    
+    // ctrl + c를 사용하여 강제종료되지 않도록 함
+    signal(SIGINT, ctrlc_handler); 
     while(1){
+
+        // 명령어 읽기
         read_command(command);
 
-        if(strcmp(command, "exit") == 0) {
+        if(strcmp(command, "quit") == 0) {
             printf("symoon shell is terminated...\n");
             break; // "exit" 입력 시, 종료
         }
         else if(strcmp(command, "help") == 0){
             help_command();
+        }
+        else if(strncmp(command, "cd ", 3) == 0){
+            cd_command(command);
         }
         else print_command(command);
     }
