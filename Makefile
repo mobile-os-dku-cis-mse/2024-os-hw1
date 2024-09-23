@@ -1,12 +1,14 @@
 NAME	=	SiSH
 
-SRCDIR	=	src/
+SRCDIR	=	src
 
-SRC		=	$(SRCDIR)/main.c
+SRC		=	$(SRCDIR)/main.c				\
+			$(SRCDIR)/execute_command.c		\
+			$(SRCDIR)/getenv.c				\
 
 OBJ		=	$(SRC:.c=.o)
 
-CFLAGS	=	-W -Wall -Wextra -Werror -ansi -pedantic
+CFLAGS	=	-W -Wall -Wextra -Werror
 
 all:	$(NAME)
 
@@ -20,3 +22,6 @@ fclean:	clean
 		rm -f $(NAME)
 
 re:	fclean all
+
+debug:	CFLAGS += -g
+debug:	re
