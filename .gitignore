@@ -1,0 +1,8 @@
+shell
+shell_debug
+shell_ftests
+shell_ref
+*.o
+*.gcno
+*.gcda
+unit_tests
