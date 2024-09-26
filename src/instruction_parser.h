@@ -1,15 +1,25 @@
 //
 // Created by user on 2024-09-19.
 //
+#include "./tools/stack.h"
+
 
 #ifndef INC_2024_OS_HW1_INSTRUCTION_PARSER_H
 #define INC_2024_OS_HW1_INSTRUCTION_PARSER_H
 
-typedef struct _piped_operands{
-    char *inst_a;
-    char *inst_b;
-    char *remainder;
-}Piped_operands;
+typedef struct {
+    const char *input;
+    int current_pos;
+    Stack *stack;
+} ParserState;
 
-int pipe_parser(char * string, Piped_operands ret);
+typedef struct {
+    char *instruction;
+    char delimiter;
+} ParsedInstruction;
+
+char* parse_next_instruction(ParserState *state);
+ParserState* init_parser(const char *input);
+void free_parser(ParserState *state);
+void free_parsed_instruction(ParsedInstruction *parsed_inst);
 #endif //INC_2024_OS_HW1_INSTRUCTION_PARSER_H
