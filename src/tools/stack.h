@@ -13,4 +13,6 @@ char pop(Stack *s);
 char peek(Stack *s);
 int is_empty(Stack *s);
 
+Stack* create_stack(int size);
+void free_stack(Stack *stack);
 #endif //INC_2024_OS_HW1_STACK_H

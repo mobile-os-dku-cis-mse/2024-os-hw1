@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
+#include <string.h> 
 #include <sys/wait.h>
 #include <sys/stat.h> 
 #include <errno.h>
@@ -19,7 +19,6 @@ int main() {
     char input[MAX_LINE];
     int should_run = 1;
     char cwd[PATH_MAX];
-    char* path_env = getenv("PATH");
 
     // running SiSH Script
     while (should_run){
@@ -70,7 +69,7 @@ int main() {
                     // execvp의 반환 값에 따라서, 명령 실패 이유를 찾도록 한다.
                     perror("execvp - fail to run the command : ");
                     exit(EXIT_FAILURE); 
-                }   
+                }     
             } else {
                 wait(NULL);
             }

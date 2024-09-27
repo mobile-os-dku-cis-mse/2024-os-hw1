@@ -18,7 +18,7 @@ typedef struct {
     char delimiter;
 } ParsedInstruction;
 
-char* parse_next_instruction(ParserState *state);
+ParsedInstruction* parse_next_instruction(ParserState *state);
 ParserState* init_parser(const char *input);
 void free_parser(ParserState *state);
 void free_parsed_instruction(ParsedInstruction *parsed_inst);

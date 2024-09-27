@@ -1,5 +1,6 @@
 #include "instruction_parser.h"
 #include <string.h>
+#include <stdlib.h>
 
 // instrcution parser split out two instructions between delimiter
 // such as, echo "hello world" > log.filee
