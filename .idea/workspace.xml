@@ -3,19 +3,35 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="2024-os-hw1" targetName="main" />
+    </generated>
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e8d8152-8c53-4464-988d-385bbf6d82af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/instruction_parser.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/instruction_parser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/string.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tools/string.h" afterDir="false" />
+    <list default="true" id="5bf537b2-c1b1-4014-88ae-9dbba72a6f83" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOW_TO_USE_MAKEFILE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_program" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/instruction_parser.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/stack.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/string_tools.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/temp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/temp_parser" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +40,14 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,29 +65,64 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "CMake Application.main.executor": "Debug",
+    "CMake Application.project.executor": "Debug",
+    "CMake Debug.2024-os-hw1.executor": "Debug",
+    "CMake Debug.2024_os_hw1.executor": "Debug",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "32224560__hohyeon",
+    "last_opened_file_path": "/home/hochacha/CLionProjects/2024-os-hw1/src/tools",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/tools" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.project">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="2024-os-hw1" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="project" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="2024-os-hw1" TARGET_NAME="main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="2024-os-hw1" RUN_TARGET_NAME="main">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="string.c" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="2024-os-hw1" TARGET_NAME="string.c" CONFIG_NAME="string.c">
       <option name="sourceFile" value="src\tools\string.c" />
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="C/C++ File.string.c" />
+      <item itemvalue="CMake Application.project" />
+      <item itemvalue="CMake Debug.2024-os-hw1" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="CMake Debug.2024-os-hw1" />
         <item itemvalue="C/C++ File.string.c" />
       </list>
     </recent_temporary>
@@ -71,28 +130,21 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0e8d8152-8c53-4464-988d-385bbf6d82af" name="Changes" comment="" />
-      <created>1726641029834</created>
+      <changelist id="5bf537b2-c1b1-4014-88ae-9dbba72a6f83" name="Changes" comment="" />
+      <created>1727404933156</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1726641029834</updated>
-      <workItem from="1726641033379" duration="2187000" />
-      <workItem from="1726652696992" duration="14818000" />
+      <updated>1727404933156</updated>
+      <workItem from="1727404935642" duration="4516000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
 </project>

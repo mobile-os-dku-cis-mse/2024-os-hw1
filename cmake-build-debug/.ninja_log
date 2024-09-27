@@ -1,0 +1,7 @@
+# ninja log v6
+1	83	1727409396280475656	CMakeFiles/main.dir/src/tools/string_tools.c.o	fe017dabbef0f54
+1	83	1727409396280475656	CMakeFiles/main.dir/src/tools/stack.c.o	a438e9a69db38160
+1	93	1727409396280475656	CMakeFiles/main.dir/src/instruction_parser.c.o	15f37ae511ac611
+0	101	1727409396280475656	CMakeFiles/main.dir/src/main.c.o	49b9261ef5782e2c
+1	34	1727409454096461496	CMakeFiles/main.dir/src/argument_parser.c.o	bebf432b34a1fcf9
+34	73	1727409454129460934	main	ed0a43584eaf4637

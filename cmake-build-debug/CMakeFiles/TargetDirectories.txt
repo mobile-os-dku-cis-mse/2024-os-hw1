@@ -1,0 +1,3 @@
+/home/hochacha/CLionProjects/2024-os-hw1/cmake-build-debug/CMakeFiles/main.dir
+/home/hochacha/CLionProjects/2024-os-hw1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/hochacha/CLionProjects/2024-os-hw1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
