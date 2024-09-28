@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0 ; i < 10 ; i++) {
 		pid = fork();
+		puts("HELLO");
 		if (pid == -1) {
 			perror("fork error");
 			return 0;
@@ -19,12 +20,14 @@ int main(int argc, char *argv[])
 		else if (pid == 0) {
 			// child
 			printf("child process with pid %d (i: %d) \n", getpid(), i);
-			exit (0);
+		
 		} else {
 			// parent
-			wait(0);
+			wait(0);	
+			puts("HI");
 		}
 	}
+	puts("HRFWE");
 	return 0;
 }
 
