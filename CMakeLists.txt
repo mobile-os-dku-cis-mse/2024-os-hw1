@@ -1,9 +1,7 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.22)
 project(2024-os-hw1 C)
 
 set(CMAKE_C_STANDARD 11)
-
-
 
 add_executable(main
         src/main.c
@@ -15,14 +13,10 @@ add_executable(main
 
 add_executable(new_SiSH
         src_new/main.c
-        src_new/SiSH.c
-        src_new/SiSH.h
+        src_new/shell.c
         src_new/tools/path_finder.c
-        src_new/tools/path_finder_test.c
-
-)
-
-add_executable(bin_path_finder_test
-        src_new/tools/path_finder.c
-        src_new/tools/path_finder_test.c
+        src_new/argument_parser.c
+        src_new/instruction_parser.c
+        src_new/tools/stack.c
+        src_new/shell.h
 )

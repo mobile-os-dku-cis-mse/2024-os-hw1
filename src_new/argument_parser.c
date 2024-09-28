@@ -7,7 +7,7 @@
 #include <string.h>
 #define MAX_ARGS 20
 
-void argument_parser(char* input, char **args) {
+int argument_parser(char* input, char **args) {
     char* token;
     int i = 0;
 
@@ -19,4 +19,5 @@ void argument_parser(char* input, char **args) {
     }
 
     args[i] = NULL;
+    return --i;
 }

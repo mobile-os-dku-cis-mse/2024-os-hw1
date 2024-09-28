@@ -1,5 +1,4 @@
 /home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles/main.dir
 /home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles/new_SiSH.dir
-/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles/bin_path_finder_test.dir
 /home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles/edit_cache.dir
 /home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles/rebuild_cache.dir

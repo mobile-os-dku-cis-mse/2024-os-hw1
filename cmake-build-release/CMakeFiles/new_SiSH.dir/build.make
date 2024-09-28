@@ -83,19 +83,19 @@ CMakeFiles/new_SiSH.dir/src_new/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/main.c -o CMakeFiles/new_SiSH.dir/src_new/main.c.s
 
-CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o: CMakeFiles/new_SiSH.dir/flags.make
-CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o: /home/hochacha/repos/2024-os-hw1/src_new/SiSH.c
-CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o: CMakeFiles/new_SiSH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o -MF CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o.d -o CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o -c /home/hochacha/repos/2024-os-hw1/src_new/SiSH.c
+CMakeFiles/new_SiSH.dir/src_new/shell.c.o: CMakeFiles/new_SiSH.dir/flags.make
+CMakeFiles/new_SiSH.dir/src_new/shell.c.o: /home/hochacha/repos/2024-os-hw1/src_new/shell.c
+CMakeFiles/new_SiSH.dir/src_new/shell.c.o: CMakeFiles/new_SiSH.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/new_SiSH.dir/src_new/shell.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/new_SiSH.dir/src_new/shell.c.o -MF CMakeFiles/new_SiSH.dir/src_new/shell.c.o.d -o CMakeFiles/new_SiSH.dir/src_new/shell.c.o -c /home/hochacha/repos/2024-os-hw1/src_new/shell.c
 
-CMakeFiles/new_SiSH.dir/src_new/SiSH.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/new_SiSH.dir/src_new/SiSH.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hochacha/repos/2024-os-hw1/src_new/SiSH.c > CMakeFiles/new_SiSH.dir/src_new/SiSH.c.i
+CMakeFiles/new_SiSH.dir/src_new/shell.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/new_SiSH.dir/src_new/shell.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hochacha/repos/2024-os-hw1/src_new/shell.c > CMakeFiles/new_SiSH.dir/src_new/shell.c.i
 
-CMakeFiles/new_SiSH.dir/src_new/SiSH.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/SiSH.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/SiSH.c -o CMakeFiles/new_SiSH.dir/src_new/SiSH.c.s
+CMakeFiles/new_SiSH.dir/src_new/shell.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/shell.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/shell.c -o CMakeFiles/new_SiSH.dir/src_new/shell.c.s
 
 CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o: CMakeFiles/new_SiSH.dir/flags.make
 CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o: /home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder.c
@@ -111,37 +111,69 @@ CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder.c -o CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.s
 
-CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o: CMakeFiles/new_SiSH.dir/flags.make
-CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o: /home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder_test.c
-CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o: CMakeFiles/new_SiSH.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o -MF CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o.d -o CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o -c /home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder_test.c
+CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o: CMakeFiles/new_SiSH.dir/flags.make
+CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o: /home/hochacha/repos/2024-os-hw1/src_new/argument_parser.c
+CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o: CMakeFiles/new_SiSH.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o -MF CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o.d -o CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o -c /home/hochacha/repos/2024-os-hw1/src_new/argument_parser.c
 
-CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder_test.c > CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.i
+CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hochacha/repos/2024-os-hw1/src_new/argument_parser.c > CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.i
 
-CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder_test.c -o CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.s
+CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/argument_parser.c -o CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.s
+
+CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o: CMakeFiles/new_SiSH.dir/flags.make
+CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o: /home/hochacha/repos/2024-os-hw1/src_new/instruction_parser.c
+CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o: CMakeFiles/new_SiSH.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o -MF CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o.d -o CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o -c /home/hochacha/repos/2024-os-hw1/src_new/instruction_parser.c
+
+CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hochacha/repos/2024-os-hw1/src_new/instruction_parser.c > CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.i
+
+CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/instruction_parser.c -o CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.s
+
+CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o: CMakeFiles/new_SiSH.dir/flags.make
+CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o: /home/hochacha/repos/2024-os-hw1/src_new/tools/stack.c
+CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o: CMakeFiles/new_SiSH.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o -MF CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o.d -o CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o -c /home/hochacha/repos/2024-os-hw1/src_new/tools/stack.c
+
+CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hochacha/repos/2024-os-hw1/src_new/tools/stack.c > CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.i
+
+CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hochacha/repos/2024-os-hw1/src_new/tools/stack.c -o CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.s
 
 # Object files for target new_SiSH
 new_SiSH_OBJECTS = \
 "CMakeFiles/new_SiSH.dir/src_new/main.c.o" \
-"CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o" \
+"CMakeFiles/new_SiSH.dir/src_new/shell.c.o" \
 "CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o" \
-"CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o"
+"CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o" \
+"CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o" \
+"CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o"
 
 # External object files for target new_SiSH
 new_SiSH_EXTERNAL_OBJECTS =
 
 new_SiSH: CMakeFiles/new_SiSH.dir/src_new/main.c.o
-new_SiSH: CMakeFiles/new_SiSH.dir/src_new/SiSH.c.o
+new_SiSH: CMakeFiles/new_SiSH.dir/src_new/shell.c.o
 new_SiSH: CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o
-new_SiSH: CMakeFiles/new_SiSH.dir/src_new/tools/path_finder_test.c.o
+new_SiSH: CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o
+new_SiSH: CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o
+new_SiSH: CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o
 new_SiSH: CMakeFiles/new_SiSH.dir/build.make
 new_SiSH: CMakeFiles/new_SiSH.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable new_SiSH"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hochacha/repos/2024-os-hw1/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable new_SiSH"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/new_SiSH.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

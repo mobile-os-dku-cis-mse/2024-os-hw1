@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/main.dir/src/main.c.o CMakeFiles/main.dir/src/instruction_parser.c.o CMakeFiles/main.dir/src/tools/stack.c.o CMakeFiles/main.dir/src/tools/string_tools.c.o CMakeFiles/main.dir/src/argument_parser.c.o -o main 

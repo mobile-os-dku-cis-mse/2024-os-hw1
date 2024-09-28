@@ -42,5 +42,4 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/main.dir/DependInfo.cmake"
   "CMakeFiles/new_SiSH.dir/DependInfo.cmake"
-  "CMakeFiles/bin_path_finder_test.dir/DependInfo.cmake"
   )
