@@ -1,7 +1,5 @@
 #include <stdio.h>
 
 int main(){
-	printf("Hello world");
-	
-	return 0;
+    printf("Hello World! This shell is symoon shell!\n");
 }

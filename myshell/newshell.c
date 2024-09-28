@@ -15,14 +15,6 @@
 #define MAX_COMMAND_LENGTH 1024
 struct termios orig_termios; // 화살표 입력키 위한 termios 제어
 
-// 명령어 히스토리 저장
-char *history[MAX_HISTORY];
-int history_count = 0;
-int current_history_index = -1;
-
-void handle_arrows(char *command){
-    
-}
 
 void read_command(char *command){
     char now_path[200];
@@ -30,7 +22,7 @@ void read_command(char *command){
     printf("\033[90m~%s\033[0m$ ", now_path);
     fgets(command, MAX_COMMAND_LENGTH, stdin);
     command[strcspn(command, "\n")] = 0; // \n 제거하기
-    history[history_count++] = command;
+    // history[history_count++] = command;
     
     /*
     fgets, gets, fgets: 전부 뒤에 \0 붙음
