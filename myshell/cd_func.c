@@ -32,6 +32,3 @@ void cd_command(char *command){
 
     return; // 자식 프로세스 생성하지 않음
 }
-
-
-//signal --> ctrl + C 누르면 꺼지는 이슈 방지
