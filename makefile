@@ -9,6 +9,7 @@ SRC =	parser.c \
 		process.c \
 		sighandlers.c \
 		word_arrays.c \
+		custom_commands.c \
 
 SRC_MAIN =	main.c
 

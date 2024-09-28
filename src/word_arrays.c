@@ -15,7 +15,7 @@ void print_board(char **board, char delimiter)
         printf("%s%c", board[i], delimiter);
 }
 
-int boardlen(char **board)
+size_t boardlen(char **board)
 {
     int i = 0;
 

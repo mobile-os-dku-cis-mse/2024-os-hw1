@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include "word_arrays.h"
+#include "custom_commands.h"
 
 int execute_programme(char *command, char **env)
 {
@@ -37,7 +38,6 @@ char *allocate_path(char *command, char *path)
     dest[strlen(path)] = '/';
     dest[strlen(path) + 1] = '\0';
     dest = strcat(dest, command);
-    dest[strlen(command) + strlen(path) + 1] = '\0';
     return dest;
 }
 
@@ -76,6 +76,7 @@ int execute_command(char *command, char **env)
             fprintf(stderr, "shell: command not found: %s\n", argv[0]);
         }
     }
+    free_board(argv);
     return 0;
 }
 
@@ -85,6 +86,8 @@ int process_command(char *command, char **env)
         return 1;
     if (strncmp(command, "./", 2) == 0)
         return execute_programme(command, env);
+    if (strncmp(command, "cd", 2) == 0)
+        return cd_command(command);
     if (execute_command(command, env) == 84)
         perror("error while executing command: ");
     return 0;

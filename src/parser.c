@@ -28,5 +28,6 @@ int parser_loop(char **env)
         line[linelen - 1] = '\0';
         callback = process_command(line, env);
     }
+    free(line);
     return 0;
 }
