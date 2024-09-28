@@ -50,13 +50,13 @@ int main() {
         // parsing the input
         // TODO: make it as a function named "parser"
 
-        ParserState *state = init_parser(input);
+        parser_state *state = init_parser(input);
+        parsed_instruction *parse_inst;
 
-        ParsedInstruction *parse_inst;
+        int pipefd [2];
+        int prev_fd = -1;
 
 
-
-        //
         // luncher
         while((parse_inst = parse_next_instruction(state)) != NULL){
 #ifdef DEBUG
@@ -65,6 +65,12 @@ int main() {
 #endif
             argument_parser(parse_inst->instruction, args);
 
+            if (pipefd != NULL && parse_inst->delimiter == '|') {
+                if (pipe(pipefd) == -1) {
+                    perror("pipe failed");
+                    exit(1);
+                }
+            }
 
             pid_t pid = fork();
 
@@ -74,7 +80,6 @@ int main() {
             } else if(pid == 0){
 
                 // TODO: execvp에서 execv로 변경
-                char *args[] = {parse_inst->instruction, NULL};
 
                 if(execvp(args[0], args) == -1){
                     // execvp의 반환 값에 따라서, 명령 실패 이유를 찾도록 한다.
