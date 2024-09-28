@@ -4,22 +4,9 @@
 #include <string.h>
 #include <errno.h>
 #include "process.h"
+#include "word_arrays.h"
 
-static bool is_in_path(char *command)
-{
-    char *path = getenv("PATH");
-
-    return true;
-}
-
-static bool is_valid_command(char *command)
-{
-    if (strcmp(command, "exit") == 0 || is_in_path(command))
-        return true;
-    return false;
-}
-
-int main_loop()
+int parser_loop(char **env)
 {
     char *line = NULL;
     char *pwd = NULL;
@@ -39,10 +26,7 @@ int main_loop()
             return 0;
         }
         line[linelen - 1] = '\0';
-        if (is_valid_command(line))
-            callback = process_command(line);
-        else
-            printf("shell: command not found: %s\n", line);
+        callback = process_command(line, env);
     }
     return 0;
 }

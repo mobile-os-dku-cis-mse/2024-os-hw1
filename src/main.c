@@ -3,7 +3,8 @@
 #include "sighandlers.h"
 #include "parser.h"
 
-int main(void)
+int main(__attribute__((unused)) int argc, __attribute__((unused))
+    char **argv, char **env)
 {
     struct sigaction sa;
 
@@ -11,7 +12,7 @@ int main(void)
     sigemptyset(&sa.sa_mask);
     sa.sa_flags = 0;
     sigaction(SIGINT, &sa, NULL);
-    main_loop();
+    parser_loop(env);
     printf("exit\n");
     return 0;
 }

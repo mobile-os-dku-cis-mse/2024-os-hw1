@@ -1,7 +1,7 @@
-shell
-shell_debug
-shell_ftests
-shell_ref
+SiSH
+SiSH_debug
+SiSH_ftests
+SiSH_ref
 *.o
 *.gcno
 *.gcda

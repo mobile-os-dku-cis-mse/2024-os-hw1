@@ -8,6 +8,7 @@
 SRC =	parser.c \
 		process.c \
 		sighandlers.c \
+		word_arrays.c \
 
 SRC_MAIN =	main.c
 
@@ -21,10 +22,10 @@ OBJ_DEBUG	= $(SRC_DEBUG:%.c=obj/debug/%.o)
 OBJ_TESTS	= $(SRC:%.c=obj/cov/%.o) $(SRC_TEST:%.c=obj/tests/%.o)
 OBJ_FTESTS	= $(SRC_DEBUG:%.c=obj/cov/%.o)
 
-NAME_RELEASE= shell
-NAME_DEBUG	= shell_debug
+NAME_RELEASE= SiSH
+NAME_DEBUG	= SiSH_debug
 NAME_TESTS	= unit_tests
-NAME_FTESTS	= shell_ftests
+NAME_FTESTS	= SiSH_ftests
 
 CC			=	gcc
 CC_RELEASE	=	$(CC)
