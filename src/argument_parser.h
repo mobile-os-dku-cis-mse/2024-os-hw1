@@ -4,5 +4,5 @@
 
 #ifndef ARGUMENT_PARSER_H
 #define ARGUMENT_PARSER_H
-void argument_parser(char* input, char **args);
+int argument_parser(char* input, char **args);
 #endif //ARGUMENT_PARSER_H

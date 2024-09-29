@@ -8,13 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/hochacha/repos/2024-os-hw1/src_new/argument_parser.c" "CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src_new/argument_parser.c.o.d"
-  "/home/hochacha/repos/2024-os-hw1/src_new/instruction_parser.c" "CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src_new/instruction_parser.c.o.d"
-  "/home/hochacha/repos/2024-os-hw1/src_new/main.c" "CMakeFiles/new_SiSH.dir/src_new/main.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src_new/main.c.o.d"
-  "/home/hochacha/repos/2024-os-hw1/src_new/shell.c" "CMakeFiles/new_SiSH.dir/src_new/shell.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src_new/shell.c.o.d"
-  "/home/hochacha/repos/2024-os-hw1/src_new/tools/builtin_commands.c" "CMakeFiles/new_SiSH.dir/src_new/tools/builtin_commands.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src_new/tools/builtin_commands.c.o.d"
-  "/home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder.c" "CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o.d"
-  "/home/hochacha/repos/2024-os-hw1/src_new/tools/stack.c" "CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o.d"
+  "/home/hochacha/repos/2024-os-hw1/src/argument_parser.c" "CMakeFiles/new_SiSH.dir/src/argument_parser.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src/argument_parser.c.o.d"
+  "/home/hochacha/repos/2024-os-hw1/src/instruction_parser.c" "CMakeFiles/new_SiSH.dir/src/instruction_parser.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src/instruction_parser.c.o.d"
+  "/home/hochacha/repos/2024-os-hw1/src/main.c" "CMakeFiles/new_SiSH.dir/src/main.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src/main.c.o.d"
+  "/home/hochacha/repos/2024-os-hw1/src/shell.c" "CMakeFiles/new_SiSH.dir/src/shell.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src/shell.c.o.d"
+  "/home/hochacha/repos/2024-os-hw1/src/tools/builtin_commands.c" "CMakeFiles/new_SiSH.dir/src/tools/builtin_commands.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src/tools/builtin_commands.c.o.d"
+  "/home/hochacha/repos/2024-os-hw1/src/tools/path_finder.c" "CMakeFiles/new_SiSH.dir/src/tools/path_finder.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src/tools/path_finder.c.o.d"
+  "/home/hochacha/repos/2024-os-hw1/src/tools/stack.c" "CMakeFiles/new_SiSH.dir/src/tools/stack.c.o" "gcc" "CMakeFiles/new_SiSH.dir/src/tools/stack.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

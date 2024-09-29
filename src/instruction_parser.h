@@ -1,11 +1,10 @@
 //
 // Created by user on 2024-09-19.
 //
-#include "./tools/stack.h"
-
 
 #ifndef INC_2024_OS_HW1_INSTRUCTION_PARSER_H
 #define INC_2024_OS_HW1_INSTRUCTION_PARSER_H
+#include "./tools/stack.h"
 
 typedef struct {
     const char *input;
