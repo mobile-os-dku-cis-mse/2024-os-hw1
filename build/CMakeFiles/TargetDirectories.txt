@@ -1,0 +1,3 @@
+/home/hochacha/repos/2024-os-hw1/build/CMakeFiles/SiSH.dir
+/home/hochacha/repos/2024-os-hw1/build/CMakeFiles/edit_cache.dir
+/home/hochacha/repos/2024-os-hw1/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/SiSH.dir/src/main.c.o CMakeFiles/SiSH.dir/src/shell.c.o CMakeFiles/SiSH.dir/src/tools/path_finder.c.o CMakeFiles/SiSH.dir/src/argument_parser.c.o CMakeFiles/SiSH.dir/src/instruction_parser.c.o CMakeFiles/SiSH.dir/src/tools/stack.c.o CMakeFiles/SiSH.dir/src/tools/builtin_commands.c.o CMakeFiles/SiSH.dir/src/tools/string_tools.c.o -o SiSH 
