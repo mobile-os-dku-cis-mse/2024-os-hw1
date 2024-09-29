@@ -6,21 +6,46 @@
 #include <unistd.h>
 #include "strops.h"
 
-void run(const char **path_list, int path_cnt)
+void run(char **path_list, char **argv)
 {
-	char input[1024];
+	extern char **environ;
+
+	if (argv[0][0] == '/')
+		execve(argv[0], argv, environ);
+	else
+	{
+		char full[4096];
+		
+		for (int i = 0; path_list[i]; i++)
+		{
+			sprintf(full, "%s/%s", path_list[i], argv[0]);
+			if (access(full, F_OK) == -1)
+				continue;
+
+			if (execve(full, argv, environ) == -1)
+				perror(argv[0]);
+		}
+	}
+
+	if (execve(argv[0], argv, environ) == -1)
+		perror(argv[0]);
+}
+
+void loop(char **path_list)
+{
+	char buf[1024];
 	
 	while (1)
 	{
 		printf("> ");
-		if (!fgets(input, 1024, stdin))
+		if (!fgets(buf, 1024, stdin))
 			break;
 
-		char *__lnptr = strchr(input, '\n');
-		if (__lnptr)
-			*__lnptr = 0;
+		char *__buf = strstrip(buf);
+		char **argv = malloc(sizeof(char*) * (strchrcnt(__buf, ' ')+2));
+		strsplit(__buf, " ", argv);
 		
-		if (!strcmp("quit", input))
+		if (!strcmp("quit", buf))
 			break;
 
 		pid_t spawn = fork();
@@ -36,7 +61,7 @@ void run(const char **path_list, int path_cnt)
 		// child process; echoing is done here.
 		else
 		{
-			puts(input);
+			run(path_list, argv);
 			exit(0);
 		}
 	}
@@ -44,12 +69,12 @@ void run(const char **path_list, int path_cnt)
 
 int main()
 {
-	// fetching the value of the 'PATH' environment variable.
 	char *path = strdup(getenv("PATH"));
-	const char **path_list = malloc(sizeof(char*) * (strchrcnt(path, ':')+1));
-	int path_cnt = strchrsplit(path, ':', path_list);
+	char **path_list = malloc(sizeof(char*) * (strchrcnt(path, ':')+2));
+	strsplit(path, ":", path_list);
 
-	run(path_list, path_cnt);
+	puts("SISH");
+	loop(path_list);
 
 	free(path_list);
 	free(path);

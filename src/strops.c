@@ -1,10 +1,31 @@
 #include <stdio.h>
 #include <string.h>
-#include <sys/types.h>
+#include <ctype.h>
 
-size_t strchrcnt(const char *s, int c)
+char *strstrip(char *s)
 {
-	size_t cnt = 0;
+	int len = strlen(s);
+
+	for (int i = len-1; i >= 0; i--)
+	{
+		if (isspace(s[i]))
+			s[i] = 0;
+		else
+			break;
+	}
+
+	for (int i = 0; i < len; i++)
+	{
+		if (!isspace(s[i]))
+			return s+i;
+	}
+
+	return s+len;
+}
+
+int strchrcnt(const char *s, int c)
+{
+	int cnt = 0;
 
 	for (int i = 0; s[i]; i++)
 	{
@@ -15,14 +36,11 @@ size_t strchrcnt(const char *s, int c)
 	return cnt;
 }
 
-size_t strchrsplit(char *s, int c, const char **res)
+void strsplit(char *s, const char *delim, char **res)
 {
-	size_t cnt = 0;
+	int cnt = 0;
 
-	char delim[2];
-	sprintf(delim, "%c", c);
-
-	const char *token = strtok(s, delim);
+	char *token = strtok(s, delim);
 	for (int i = 0; token; i++)
 	{
 		cnt++;
@@ -30,5 +48,5 @@ size_t strchrsplit(char *s, int c, const char **res)
 		token = strtok(NULL, delim);
 	}
 
-	return cnt;
+	res[cnt] = 0;
 }

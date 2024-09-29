@@ -1,12 +1,13 @@
 #ifndef __STROPS_H
 #define __STROPS_H
 
-#include <sys/types.h>
+// strips all leading/trailing whitespace characters from 's' and returns it.
+char *strstrip(char *s);
 
 // returns the number of occurrences of 'c' in 's'.
-size_t strchrcnt(const char *s, int c);
+int strchrcnt(const char *s, int c);
 
-// splits 's' by the delimiter 'c', and stores the result in 'res'.
-size_t strchrsplit(char *s, int c, const char **res);
+// splits 's' by the delimiter 'c', and stores the result in 'res'; 'res' is null-terminated.
+void strsplit(char *s, const char *delim, char **res);
 
 #endif
