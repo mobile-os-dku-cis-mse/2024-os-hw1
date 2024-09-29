@@ -3,7 +3,7 @@ project(2024-os-hw1 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(new_SiSH
+add_executable(SiSH
         src/main.c
         src/shell.c
         src/tools/path_finder.c
@@ -13,4 +13,5 @@ add_executable(new_SiSH
         src/shell.h
         src/tools/builtin_commands.c
         src/tools/builtin_commands.h
+        src/tools/string_tools.c
 )

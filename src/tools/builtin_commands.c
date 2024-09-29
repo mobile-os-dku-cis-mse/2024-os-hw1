@@ -22,7 +22,6 @@ int change_directory(char* arg[]) {
             return -1;
         }
         arg[1] = temp;
-        printf("%s\n", arg[1]);
     }
 
     arg[1] = file_path_finder(arg[1]);

@@ -15,6 +15,7 @@
 #include "argument_parser.h"
 #include "tools/builtin_commands.h"
 #include "tools/path_finder.h"
+#include "tools/string_tools.h"
 
 #define INPUT_MAX 1024
 #define CWD_MAX 1024
@@ -36,9 +37,9 @@ void init_shell() {
 }
 
 void show_basic_prompt_everyline() {
-    printf("%s@%s~$", host.host, host.hostname);
+    printf("%s@%s ", host.host, host.hostname);
     getcwd(cwd, CWD_MAX);
-    printf("%s ", cwd);
+    printf("%s~$", cwd);
 }
 
 int builtin_command_checker(char* arg) {
@@ -122,6 +123,7 @@ int run_shell() {
             } else if (parsed_instruction->delimiter == '>') {
                 // 리다이렉션 처리
                 parsed_instruction = parse_next_instruction(state);
+                strip(parsed_instruction->instruction);
                 if (parsed_instruction == NULL) {
                     fprintf(stderr, "redicted file is not designated\n");
                     exit(EXIT_FAILURE);

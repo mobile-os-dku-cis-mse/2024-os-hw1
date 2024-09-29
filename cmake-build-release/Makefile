@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named new_SiSH
+# Target rules for targets named SiSH
 
 # Build rule for target.
-new_SiSH: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 new_SiSH
-.PHONY : new_SiSH
+SiSH: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SiSH
+.PHONY : SiSH
 
 # fast build rule for target.
-new_SiSH/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/build
-.PHONY : new_SiSH/fast
+SiSH/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/build
+.PHONY : SiSH/fast
 
 src/argument_parser.o: src/argument_parser.c.o
 .PHONY : src/argument_parser.o
 
 # target to build an object file
 src/argument_parser.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/argument_parser.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/argument_parser.c.o
 .PHONY : src/argument_parser.c.o
 
 src/argument_parser.i: src/argument_parser.c.i
@@ -142,7 +142,7 @@ src/argument_parser.i: src/argument_parser.c.i
 
 # target to preprocess a source file
 src/argument_parser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/argument_parser.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/argument_parser.c.i
 .PHONY : src/argument_parser.c.i
 
 src/argument_parser.s: src/argument_parser.c.s
@@ -150,7 +150,7 @@ src/argument_parser.s: src/argument_parser.c.s
 
 # target to generate assembly for a file
 src/argument_parser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/argument_parser.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/argument_parser.c.s
 .PHONY : src/argument_parser.c.s
 
 src/instruction_parser.o: src/instruction_parser.c.o
@@ -158,7 +158,7 @@ src/instruction_parser.o: src/instruction_parser.c.o
 
 # target to build an object file
 src/instruction_parser.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/instruction_parser.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/instruction_parser.c.o
 .PHONY : src/instruction_parser.c.o
 
 src/instruction_parser.i: src/instruction_parser.c.i
@@ -166,7 +166,7 @@ src/instruction_parser.i: src/instruction_parser.c.i
 
 # target to preprocess a source file
 src/instruction_parser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/instruction_parser.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/instruction_parser.c.i
 .PHONY : src/instruction_parser.c.i
 
 src/instruction_parser.s: src/instruction_parser.c.s
@@ -174,7 +174,7 @@ src/instruction_parser.s: src/instruction_parser.c.s
 
 # target to generate assembly for a file
 src/instruction_parser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/instruction_parser.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/instruction_parser.c.s
 .PHONY : src/instruction_parser.c.s
 
 src/main.o: src/main.c.o
@@ -182,7 +182,7 @@ src/main.o: src/main.c.o
 
 # target to build an object file
 src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/main.c.o
 .PHONY : src/main.c.o
 
 src/main.i: src/main.c.i
@@ -190,7 +190,7 @@ src/main.i: src/main.c.i
 
 # target to preprocess a source file
 src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/main.c.i
 .PHONY : src/main.c.i
 
 src/main.s: src/main.c.s
@@ -198,7 +198,7 @@ src/main.s: src/main.c.s
 
 # target to generate assembly for a file
 src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/main.c.s
 .PHONY : src/main.c.s
 
 src/shell.o: src/shell.c.o
@@ -206,7 +206,7 @@ src/shell.o: src/shell.c.o
 
 # target to build an object file
 src/shell.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/shell.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/shell.c.o
 .PHONY : src/shell.c.o
 
 src/shell.i: src/shell.c.i
@@ -214,7 +214,7 @@ src/shell.i: src/shell.c.i
 
 # target to preprocess a source file
 src/shell.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/shell.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/shell.c.i
 .PHONY : src/shell.c.i
 
 src/shell.s: src/shell.c.s
@@ -222,7 +222,7 @@ src/shell.s: src/shell.c.s
 
 # target to generate assembly for a file
 src/shell.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/shell.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/shell.c.s
 .PHONY : src/shell.c.s
 
 src/tools/builtin_commands.o: src/tools/builtin_commands.c.o
@@ -230,7 +230,7 @@ src/tools/builtin_commands.o: src/tools/builtin_commands.c.o
 
 # target to build an object file
 src/tools/builtin_commands.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/builtin_commands.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/builtin_commands.c.o
 .PHONY : src/tools/builtin_commands.c.o
 
 src/tools/builtin_commands.i: src/tools/builtin_commands.c.i
@@ -238,7 +238,7 @@ src/tools/builtin_commands.i: src/tools/builtin_commands.c.i
 
 # target to preprocess a source file
 src/tools/builtin_commands.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/builtin_commands.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/builtin_commands.c.i
 .PHONY : src/tools/builtin_commands.c.i
 
 src/tools/builtin_commands.s: src/tools/builtin_commands.c.s
@@ -246,7 +246,7 @@ src/tools/builtin_commands.s: src/tools/builtin_commands.c.s
 
 # target to generate assembly for a file
 src/tools/builtin_commands.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/builtin_commands.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/builtin_commands.c.s
 .PHONY : src/tools/builtin_commands.c.s
 
 src/tools/path_finder.o: src/tools/path_finder.c.o
@@ -254,7 +254,7 @@ src/tools/path_finder.o: src/tools/path_finder.c.o
 
 # target to build an object file
 src/tools/path_finder.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/path_finder.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/path_finder.c.o
 .PHONY : src/tools/path_finder.c.o
 
 src/tools/path_finder.i: src/tools/path_finder.c.i
@@ -262,7 +262,7 @@ src/tools/path_finder.i: src/tools/path_finder.c.i
 
 # target to preprocess a source file
 src/tools/path_finder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/path_finder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/path_finder.c.i
 .PHONY : src/tools/path_finder.c.i
 
 src/tools/path_finder.s: src/tools/path_finder.c.s
@@ -270,7 +270,7 @@ src/tools/path_finder.s: src/tools/path_finder.c.s
 
 # target to generate assembly for a file
 src/tools/path_finder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/path_finder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/path_finder.c.s
 .PHONY : src/tools/path_finder.c.s
 
 src/tools/stack.o: src/tools/stack.c.o
@@ -278,7 +278,7 @@ src/tools/stack.o: src/tools/stack.c.o
 
 # target to build an object file
 src/tools/stack.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/stack.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/stack.c.o
 .PHONY : src/tools/stack.c.o
 
 src/tools/stack.i: src/tools/stack.c.i
@@ -286,7 +286,7 @@ src/tools/stack.i: src/tools/stack.c.i
 
 # target to preprocess a source file
 src/tools/stack.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/stack.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/stack.c.i
 .PHONY : src/tools/stack.c.i
 
 src/tools/stack.s: src/tools/stack.c.s
@@ -294,8 +294,32 @@ src/tools/stack.s: src/tools/stack.c.s
 
 # target to generate assembly for a file
 src/tools/stack.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src/tools/stack.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/stack.c.s
 .PHONY : src/tools/stack.c.s
+
+src/tools/string_tools.o: src/tools/string_tools.c.o
+.PHONY : src/tools/string_tools.o
+
+# target to build an object file
+src/tools/string_tools.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/string_tools.c.o
+.PHONY : src/tools/string_tools.c.o
+
+src/tools/string_tools.i: src/tools/string_tools.c.i
+.PHONY : src/tools/string_tools.i
+
+# target to preprocess a source file
+src/tools/string_tools.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/string_tools.c.i
+.PHONY : src/tools/string_tools.c.i
+
+src/tools/string_tools.s: src/tools/string_tools.c.s
+.PHONY : src/tools/string_tools.s
+
+# target to generate assembly for a file
+src/tools/string_tools.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SiSH.dir/build.make CMakeFiles/SiSH.dir/src/tools/string_tools.c.s
+.PHONY : src/tools/string_tools.c.s
 
 # Help Target
 help:
@@ -305,7 +329,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... new_SiSH"
+	@echo "... SiSH"
 	@echo "... src/argument_parser.o"
 	@echo "... src/argument_parser.i"
 	@echo "... src/argument_parser.s"
@@ -327,6 +351,9 @@ help:
 	@echo "... src/tools/stack.o"
 	@echo "... src/tools/stack.i"
 	@echo "... src/tools/stack.s"
+	@echo "... src/tools/string_tools.o"
+	@echo "... src/tools/string_tools.i"
+	@echo "... src/tools/string_tools.s"
 .PHONY : help
 
 
