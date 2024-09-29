@@ -6,62 +6,75 @@
 #include <unistd.h>
 #include "strops.h"
 
-void run(char **path_list, char **argv)
+static char **DIRS;
+
+void run(char **argv)
 {
 	extern char **environ;
+	char abs[4096]; // absolute filepath storage.
 
-	if (argv[0][0] == '/')
-		execve(argv[0], argv, environ);
-	else
+	if (argv[0][0] == '/' || argv[0][0] == '.' || argv[0][0] == '~')
 	{
-		char full[4096];
-		
-		for (int i = 0; path_list[i]; i++)
-		{
-			sprintf(full, "%s/%s", path_list[i], argv[0]);
-			if (access(full, F_OK) == -1)
-				continue;
+		if (execve(argv[0], argv, environ) == -1)
+			perror(argv[0]);
 
-			if (execve(full, argv, environ) == -1)
-				perror(argv[0]);
-		}
+		return;
+	}
+	
+	for (int i = 0; DIRS[i]; i++)
+	{
+		sprintf(abs, "%s/%s", DIRS[i], argv[0]);
+
+		if (access(abs, X_OK) == -1)
+			continue;
+
+		if (execve(abs, argv, environ) == -1)
+			perror(argv[0]);
 	}
 
-	if (execve(argv[0], argv, environ) == -1)
-		perror(argv[0]);
+	printf("%s: command not found\n", argv[0]);
 }
 
-void loop(char **path_list)
+void loop()
 {
 	char buf[1024];
+	char *__buf;
+	char **argv;
+	pid_t spawn;
 	
 	while (1)
 	{
-		printf("> ");
+		printf(">> ");
 		if (!fgets(buf, 1024, stdin))
 			break;
 
-		char *__buf = strstrip(buf);
-		char **argv = malloc(sizeof(char*) * (strchrcnt(__buf, ' ')+2));
+		__buf = strstrip(buf);
+		if (!__buf[0])
+			continue;
+
+		argv = malloc(sizeof(char*) * (strchrcnt(__buf, ' ')+2));
 		strsplit(__buf, " ", argv);
 		
-		if (!strcmp("quit", buf))
+		if (!strcmp("quit", __buf))
 			break;
 
-		pid_t spawn = fork();
+		spawn = fork();
 
 		// fork error.
 		if (spawn == -1)
-			exit(0);
+		{
+			perror("fork");
+			exit(1);
+		}
 
 		// parent process.
 		if (spawn)
 			wait(0);
 
-		// child process; echoing is done here.
+		// child process; program execution is done here.
 		else
 		{
-			run(path_list, argv);
+			run(argv);
 			exit(0);
 		}
 	}
@@ -69,14 +82,16 @@ void loop(char **path_list)
 
 int main()
 {
-	char *path = strdup(getenv("PATH"));
-	char **path_list = malloc(sizeof(char*) * (strchrcnt(path, ':')+2));
-	strsplit(path, ":", path_list);
+	char *PATH;
 
-	puts("SISH");
-	loop(path_list);
+	// parsing the 'PATH' environment variable.
+	PATH = strdup(getenv("PATH"));
+	DIRS = malloc(sizeof(char*) * (strchrcnt(PATH, ':')+2));
+	strsplit(PATH, ":", DIRS);
 
-	free(path_list);
-	free(path);
+	loop();
+
+	free(PATH);
+	free(DIRS);
 	return 0;
 }
