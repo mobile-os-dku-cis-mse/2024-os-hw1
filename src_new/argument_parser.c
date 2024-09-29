@@ -57,12 +57,11 @@ int argument_parser(char* input, char **args) {
     int in_double_quote = 0;
 
     while (*p != '\0' && i < MAX_ARGS - 1) {
-        // 공백 건너뛰기
         while (isspace((unsigned char)*p)) p++;
 
         if (*p == '\0') break;
 
-        char arg_buffer[4096]; // 충분한 크기의 버퍼
+        char arg_buffer[4096];
         char *arg_end = arg_buffer;
 
         while (*p != '\0') {
@@ -106,10 +105,9 @@ int argument_parser(char* input, char **args) {
             strcpy(expanded_arg, arg_buffer);
         }
 
-        // 동적 메모리 할당하여 인자 저장
         args[i] = strdup(expanded_arg);
         if (args[i] == NULL) {
-            perror("메모리 할당 실패");
+            perror("argument_parser: fail to allocate memory - ");
             return -1;
         }
         i++;

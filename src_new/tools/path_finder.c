@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <asm-generic/errno-base.h>
 
 #define PATH_MAX 2048
 
@@ -82,13 +81,11 @@ char* file_path_finder(const char* filename) {
 }
 
 void file_path_prefixer(char* args[], int arg_count) {
-    // 0번은 이미 경로를 찾음
     for (int i = 1; i < arg_count; i++) {
         if(args[i][0] == '-') {
             continue;
         }
 
-        // 인자가 './' 또는 '../'로 시작하는지 확인
         if (strncmp(args[i], "./", 2) == 0 || strncmp(args[i], "../", 3) == 0) {
             char* new_path = file_path_finder(args[i]);
             if (new_path != NULL) {

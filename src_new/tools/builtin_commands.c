@@ -7,7 +7,6 @@
 #define MAX_ARGS 1024
 #endif
 
-#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

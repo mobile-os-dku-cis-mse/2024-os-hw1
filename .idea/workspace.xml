@@ -27,10 +27,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5bf537b2-c1b1-4014-88ae-9dbba72a6f83" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/new_SiSH" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/new_SiSH" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_new/shell.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_new/shell.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_new/argument_parser.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_new/argument_parser.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_new/instruction_parser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src_new/instruction_parser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_new/tools/builtin_commands.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_new/tools/builtin_commands.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src_new/tools/path_finder.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_new/tools/path_finder.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_new/tools/stack.c" beforeDir="false" afterPath="$PROJECT_DIR$/src_new/tools/stack.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +244,8 @@
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src_new/shell.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src_new/tools/path_finder.h" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -262,7 +266,7 @@
     "CMake Application.bin_path_finder.executor": "Run",
     "CMake Application.bin_path_finder_test.executor": "Run",
     "CMake Application.main.executor": "Debug",
-    "CMake Application.new_SiSH.executor": "Debug",
+    "CMake Application.new_SiSH.executor": "Run",
     "CMake Application.project.executor": "Run",
     "CMake Debug.2024-os-hw1.executor": "Debug",
     "CMake Debug.2024_os_hw1.executor": "Debug",
@@ -334,7 +338,7 @@
       <workItem from="1727520361648" duration="17537000" />
       <workItem from="1727585625779" duration="2819000" />
       <workItem from="1727589776682" duration="7363000" />
-      <workItem from="1727610532362" duration="6899000" />
+      <workItem from="1727610532362" duration="8027000" />
     </task>
     <servers />
   </component>
