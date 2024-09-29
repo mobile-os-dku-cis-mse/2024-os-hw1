@@ -19,4 +19,6 @@ add_executable(new_SiSH
         src_new/instruction_parser.c
         src_new/tools/stack.c
         src_new/shell.h
+        src_new/tools/builtin_commands.c
+        src_new/tools/builtin_commands.h
 )

@@ -83,4 +83,5 @@ CMakeFiles/new_SiSH.dir/src_new/shell.c.o: \
  /home/hochacha/repos/2024-os-hw1/src_new/instruction_parser.h \
  /home/hochacha/repos/2024-os-hw1/src_new/./tools/stack.h \
  /home/hochacha/repos/2024-os-hw1/src_new/argument_parser.h \
+ /home/hochacha/repos/2024-os-hw1/src_new/tools/builtin_commands.h \
  /home/hochacha/repos/2024-os-hw1/src_new/tools/path_finder.h

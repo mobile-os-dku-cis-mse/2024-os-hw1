@@ -358,6 +358,30 @@ src_new/shell.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src_new/shell.c.s
 .PHONY : src_new/shell.c.s
 
+src_new/tools/builtin_commands.o: src_new/tools/builtin_commands.c.o
+.PHONY : src_new/tools/builtin_commands.o
+
+# target to build an object file
+src_new/tools/builtin_commands.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src_new/tools/builtin_commands.c.o
+.PHONY : src_new/tools/builtin_commands.c.o
+
+src_new/tools/builtin_commands.i: src_new/tools/builtin_commands.c.i
+.PHONY : src_new/tools/builtin_commands.i
+
+# target to preprocess a source file
+src_new/tools/builtin_commands.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src_new/tools/builtin_commands.c.i
+.PHONY : src_new/tools/builtin_commands.c.i
+
+src_new/tools/builtin_commands.s: src_new/tools/builtin_commands.c.s
+.PHONY : src_new/tools/builtin_commands.s
+
+# target to generate assembly for a file
+src_new/tools/builtin_commands.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/new_SiSH.dir/build.make CMakeFiles/new_SiSH.dir/src_new/tools/builtin_commands.c.s
+.PHONY : src_new/tools/builtin_commands.c.s
+
 src_new/tools/path_finder.o: src_new/tools/path_finder.c.o
 .PHONY : src_new/tools/path_finder.o
 
@@ -443,6 +467,9 @@ help:
 	@echo "... src_new/shell.o"
 	@echo "... src_new/shell.i"
 	@echo "... src_new/shell.s"
+	@echo "... src_new/tools/builtin_commands.o"
+	@echo "... src_new/tools/builtin_commands.i"
+	@echo "... src_new/tools/builtin_commands.s"
 	@echo "... src_new/tools/path_finder.o"
 	@echo "... src_new/tools/path_finder.i"
 	@echo "... src_new/tools/path_finder.s"

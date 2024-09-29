@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/new_SiSH.dir/src_new/main.c.o.d"
   "CMakeFiles/new_SiSH.dir/src_new/shell.c.o"
   "CMakeFiles/new_SiSH.dir/src_new/shell.c.o.d"
+  "CMakeFiles/new_SiSH.dir/src_new/tools/builtin_commands.c.o"
+  "CMakeFiles/new_SiSH.dir/src_new/tools/builtin_commands.c.o.d"
   "CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o"
   "CMakeFiles/new_SiSH.dir/src_new/tools/path_finder.c.o.d"
   "CMakeFiles/new_SiSH.dir/src_new/tools/stack.c.o"
