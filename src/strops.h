@@ -7,7 +7,7 @@ char *strstrip(char *s);
 // returns the number of occurrences of 'c' in 's'.
 int strchrcnt(const char *s, int c);
 
-// splits 's' by the delimiter 'c', and stores the result in 'res'; 'res' is null-terminated.
+// splits 's' by the provided delimiter, and stores the result in 'res'; 'res' will be null-terminated.
 void strsplit(char *s, const char *delim, char **res);
 
 #endif
