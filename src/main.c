@@ -4,33 +4,12 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include "strcnt.h"
+#include "strops.h"
 
-int main()
+void run(const char **path_list, int path_cnt)
 {
-	// fetching the value of the 'PATH' environment variable.
-	const char *PATH = getenv("PATH");
-	char *path_copy = malloc(sizeof(char) * (strlen(PATH)+1));
-	strcpy(path_copy, PATH);
-
-	// tokenizing the full string into individual paths for easier lookup.
-	const char **path_list = malloc(sizeof(char*) * (strchrcnt(path_copy, ':')+1));
-	const char *__path_token = strtok(path_copy, ":");
-	int path_cnt = 0;
-	for (int i = 0; __path_token; i++)
-	{
-		path_list[i] = __path_token;
-		path_cnt++;
-		__path_token = strtok(NULL, ":");
-	}
-
-	puts("recognized system paths:");
-	for (int i = 0; i < path_cnt; i++)
-		puts(path_list[i]);
-
 	char input[1024];
 	
-	// so far, the program merely echoes the input back to the user.
 	while (1)
 	{
 		printf("> ");
@@ -57,13 +36,22 @@ int main()
 		// child process; echoing is done here.
 		else
 		{
-			printf("process %d spawned from process %d\n", getpid(), getppid());
 			puts(input);
 			exit(0);
 		}
 	}
+}
+
+int main()
+{
+	// fetching the value of the 'PATH' environment variable.
+	char *path = strdup(getenv("PATH"));
+	const char **path_list = malloc(sizeof(char*) * (strchrcnt(path, ':')+1));
+	int path_cnt = strchrsplit(path, ':', path_list);
+
+	run(path_list, path_cnt);
 
 	free(path_list);
-	free(path_copy);
+	free(path);
 	return 0;
 }
