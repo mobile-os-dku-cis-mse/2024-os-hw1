@@ -31,7 +31,9 @@ int execute_command(char input[]) {
         if (strcmp(args[0], "getenv") == 0) {
             (*fun_ptr[0])(args);
         } else {
-            execvp(args[0], args);
+            if (execvp(args[0], args) == -1) {
+                fprintf(stderr, "SiSH: command not found: %s\n", args[0]);
+            }
         }
         return 0;
     } else {
