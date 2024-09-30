@@ -59,7 +59,7 @@ void execute_pipe(char *cmd1, char *cmd2)
     pid_t pid1 = fork();
     if (pid1 == 0) 
     {
-        dup2(pipefd[1], STDOUT_FILENO);  // 파이프의 쓰기 끝으로 출력 연결
+        dup2(pipefd[1], STDOUT_FILENO);
         close(pipefd[0]);
         close(pipefd[1]);
         char *args1[MAX_ARGS];
@@ -72,7 +72,7 @@ void execute_pipe(char *cmd1, char *cmd2)
     pid_t pid2 = fork();
     if (pid2 == 0) 
     {
-        dup2(pipefd[0], STDIN_FILENO);  // 파이프의 읽기 끝으로 입력 연결
+        dup2(pipefd[0], STDIN_FILENO);
         close(pipefd[0]);
         close(pipefd[1]);
         char *args2[MAX_ARGS];
@@ -155,13 +155,13 @@ int main()
 
         // 백그라운드 실행 확인 (& 처리)
         int i = 0;
-        while (args[i] != NULL) i++;  // 인자의 끝을 찾음
+        while (args[i] != NULL) i++; 
         int background = 0;
 
         if (i > 0 && args[i - 1][strlen(args[i - 1]) - 1] == '&') 
         {
             background = 1;  // 백그라운드 실행 플래그 설정
-            args[i - 1][strlen(args[i - 1]) - 1] = '\0';  // '&' 제거
+            args[i - 1][strlen(args[i - 1]) - 1] = '\0'; 
         }
 
         // AND 연산자 처리 (&&)

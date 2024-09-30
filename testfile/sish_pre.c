@@ -105,3 +105,31 @@ int main()
 
     return 0;
 }
+
+
+// 'echo' 명령어와 환경 변수 처리
+/*
+if (strcmp(args[0], "echo") == 0) 
+{
+    for (int i = 1; args[i] != NULL; i++) 
+    {
+        if (args[i][0] == '$') 
+        {
+            char *env_var = getenv(args[i] + 1);
+            if (env_var) 
+            {
+                printf("%s ", env_var);
+            } 
+            else 
+            {
+                printf("Environment variable not found ");
+            }
+        } else 
+        {
+            printf("%s ", args[i]);
+        }
+    }
+    printf("\n");
+    continue;
+}
+*/
