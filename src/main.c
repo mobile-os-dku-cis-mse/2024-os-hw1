@@ -52,11 +52,11 @@ void loop()
 		if (!__buf[0])
 			continue;
 
-		argv = malloc(sizeof(char*) * (strchrcnt(__buf, ' ')+2));
-		strsplit(__buf, " ", argv);
-		
 		if (!strcmp("quit", __buf))
 			break;
+
+		argv = malloc(sizeof(char*) * (strchrcnt(__buf, ' ')+2));
+		strsplit(__buf, " ", argv);
 
 		spawn = fork();
 
@@ -77,6 +77,8 @@ void loop()
 			run(argv);
 			exit(0);
 		}
+
+		free(argv);
 	}
 }
 
