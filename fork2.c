@@ -68,7 +68,6 @@ int main()
 			new_sa.sa_handler = child_handler;
 			sigaction(SIGUSR1, &new_sa, &old_sa);
 
-
 			count = 0;
 			flag = 0;
 			while (!flag) {
@@ -78,10 +77,9 @@ int main()
 			return 0;
 		} else {
 			// parent
-
 			pids[i] = ipid;
-			//ipid = wait(&child_status);
-			//printf("(%d) proc %d completed.\n", getpid(), ipid);
+			ipid = wait(&child_status);
+			printf("(%d) proc %d completed.\n", getpid(), ipid);
 		}
 	}
 
