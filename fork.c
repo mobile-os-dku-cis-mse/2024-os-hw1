@@ -1,30 +1,48 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/wait.h>
 #include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>  // pid_t를 정의하기 위한 헤더 파일
 
-int main(int argc, char *argv[])
+
+int main() 
 {
-	pid_t pid;
-	int i;
+    int pipefd[2];
+    pid_t pid;
+    char buffer[30];
 
-	for (i = 0 ; i < 10 ; i++) {
-		pid = fork();
-		if (pid == -1) {
-			perror("fork error");
-			return 0;
-		}
-		else if (pid == 0) {
-			// child
-			printf("child process with pid %d (i: %d) \n", getpid(), i);
-			exit (0);
-		} else {
-			// parent
-			wait(0);
-		}
-	}
-	return 0;
+    // 파이프 생성
+    if (pipe(pipefd) == -1) 
+    {
+        perror("Pipe failed");
+        exit(1);
+    }
+
+    pid = fork();
+    
+    if (pid < 0) 
+    {
+        perror("Fork failed");
+        exit(1);
+    }
+
+    if (pid == 0) 
+    {
+        // 자식 프로세스: 파이프에 메시지 쓰기
+        close(pipefd[0]);  // 읽기 종료
+        char message[] = "Hello from child!";
+        write(pipefd[1], message, strlen(message) + 1);
+        close(pipefd[1]);  // 쓰기 종료
+        exit(0);
+    } 
+    else 
+    {
+        // 부모 프로세스: 파이프에서 메시지 읽기
+        close(pipefd[1]);  // 쓰기 종료
+        read(pipefd[0], buffer, sizeof(buffer));
+        printf("Received from child: %s\n", buffer);
+        close(pipefd[0]);  // 읽기 종료
+    }
+
+    return 0;
 }
-

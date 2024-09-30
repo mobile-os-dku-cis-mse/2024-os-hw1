@@ -2,26 +2,32 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[]) 
 {
-	int i, j=0;
-	char *env, *str;
-	char *tok[100], *saveptr;
-	if (argc == 1)	{
-		printf("usage: getenv env_vars ... \n");
-		return 0;
-	} else {
-		for (i = 0 ; i < argc-1 ; i++) {
-			env = getenv(argv[i+1]);
-			printf("%s=%s\n", argv[i+1], env);
-			for (j=0,str=env; ;str= NULL,j++) {
-				tok[j] = strtok_r(str, ":", &saveptr);
-				if (tok[j] == NULL) break;
-				printf("\t%s\n", tok[j]);
-			}
-			printf("***---------------------***\n");
-		}
-	}
+    if (argc != 3) 
+    {
+        printf("Usage: %s <ENV_VAR_NAME> <VALUE>\n", argv[0]);
+        return 1;
+    }
 
-	return 0;
+    // 환경 변수 설정
+    if (setenv(argv[1], argv[2], 1) == -1) 
+    {
+        perror("Failed to set environment variable");
+        return 1;
+    }
+
+    // 설정한 환경 변수 읽기
+    char *value = getenv(argv[1]);
+    if (value == NULL) 
+    {
+        printf("Environment variable not found.\n");
+    } 
+    else 
+    {
+        printf("Environment variable %s = %s\n", argv[1], value);
+    }
+
+    return 0;
 }
+
