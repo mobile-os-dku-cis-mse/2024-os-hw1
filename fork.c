@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <unistd.h>//fork()함수가 들어있는 라이브러리
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/wait.h>
